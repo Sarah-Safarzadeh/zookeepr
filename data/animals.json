@@ -135,6 +135,17 @@
         "hungry"
       ],
       "id": "13"
+    },
+    {
+      "name": "Sarah",
+      "species": "Ape",
+      "diet": "carnivore",
+      "personalityTraits": [
+        "hungry",
+        "zany",
+        "anxious"
+      ],
+      "id": "14"
     }
   ]
 }

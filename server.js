@@ -10,6 +10,8 @@ app.use(express.urlencoded({ extended: true }));
 // parse incoming JSON data
 app.use(express.json());
 const { animals } = require('./data/animals.json');
+// make files readily available
+app.use(express.static('public'));
 
 // Functions
 
@@ -113,6 +115,12 @@ function filterByQuery(query, animalsArray) {
       const animal = createNewAnimal(req.body, animals);
       res.json(animal);
     }
+  });
+
+  // HTML Route
+
+  app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
   });
 
   app.listen(PORT, () => {
